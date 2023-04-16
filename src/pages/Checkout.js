@@ -94,7 +94,7 @@ const Checkout = () => {
       alert("Razorpay failed to load ");
       return
     }
-    const result = await axios.post("http://localhost:5000/api/user/order/checkout", { amount: totalAmount + 5 }, config);
+    const result = await axios.post("https://developer-back.onrender.com/api/user/order/checkout", { amount: totalAmount + 5 }, config);
     if (!result) {
       alert("Something went Wrong !")
       return;
@@ -114,7 +114,7 @@ const Checkout = () => {
           razorpayOrderId: response.razorpay_order_id,
         };
 
-        const result = await axios.post("http://localhost:5000/api/user/order/paymentVerification", data, config);
+        const result = await axios.post("https://developer-back.onrender.com/api/user/order/paymentVerification", data, config);
         setPaymentInfo({
           razorpayPaymentId: response.razorpay_payment_id,
           razorpayOrderId: response.razorpay_order_id,
