@@ -115,7 +115,7 @@ const Home = () => {
         </div>
       </Container>
 
-      <Container class1="home-wrapper-2 py-5">
+      {/* <Container class1="home-wrapper-2 py-5">
         <div className="row">
           <div className="col-12">
             <div className="categories d-flex flex-wrap justify-content-between align-items-center">
@@ -180,7 +180,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </Container>
+      </Container> */}
 
       <Container class1="featured-wrapper py-5 home-wrapper-2" >
         <div className="row">
@@ -226,12 +226,12 @@ const Home = () => {
                           <button className='border-0 bg-transparent'>
                             <img onClick={()=>{navigate("/product/"+item?._id)}} src="images/view.svg" alt="view" />
                           </button>
-                          <button className='border-0 bg-transparent'>
+                          {/* <button className='border-0 bg-transparent'>
                             <img src="images/prodcompare.svg" alt="prodcompare" />
-                          </button>
-                          <button className='border-0 bg-transparent'>
+                          </button> */}
+                          {/* <button className='border-0 bg-transparent'>
                             <img  src="images/add-cart.svg" alt="addcart" />
-                          </button>
+                          </button> */}
 
                         </div>
                       </div>
@@ -367,12 +367,12 @@ const Home = () => {
                         <button className='border-0 bg-transparent'>
                           <img  onClick={()=>{navigate("/product/"+item?._id)}} src="images/view.svg" alt="view" />
                         </button>
-                        <button className='border-0 bg-transparent'>
+                        {/* <button className='border-0 bg-transparent'>
                           <img src="images/prodcompare.svg" alt="prodcompare" />
-                        </button>
-                        <button className='border-0 bg-transparent'>
+                        </button> */}
+                        {/* <button className='border-0 bg-transparent'>
                           <img src="images/add-cart.svg" alt="addcart" />
-                        </button>
+                        </button> */}
 
                       </div>
                     </div>
