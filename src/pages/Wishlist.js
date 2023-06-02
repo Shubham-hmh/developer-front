@@ -31,36 +31,40 @@ const Wishlist = () => {
         <>
             <Meta title={"Wishlist"} />
             <BreadCrumb title="Wishlist" />
-            <Container class1="wishlist-wrapper home-wrapper-2 py-5">
-                <div className="row">
-                {
-                    wishlistState ===[] && <div className='text-center fs-3'>No Data</div>
-                }
-                    {
-                        wishlistState?.map((item, index) => {
-                            return (
-                                <div className="col-3" key={index}>
-                                    <div className="wishlist-card position-relative">
-                                        <img onClick={() => { removeFromWishlist(item?._id) }}
-                                            src="images/cross.svg" alt="cross" className='position-absolute cross img-fluid' />
+       
+            <Container className="wishlist-wrapper home-wrapper-2 py-5">
+  <div className="row">
+    {wishlistState?.length === 0 && <div className="text-center fs-3">No Data</div>}
+    {wishlistState?.map((item, index) => (
+      <div className="col-lg-3 col-md-4 col-sm-6 col-12" key={index}>
+        <div className="wishlist-card position-relative">
+          <img
+            onClick={() => {
+              removeFromWishlist(item?._id);
+            }}
+            src="images/cross.svg"
+            alt="cross"
+            className="position-absolute cross img-fluid"
+          />
 
-                                        <div className="wishlist-card-image bg-white">
-                                            <img src={item?.images[0].url ? item?.images[0].url : "images/watch.jpg"} className='img-fluid  d-block mx-auto' alt="watch" width={160} />
+          <div className="wishlist-card-image bg-white">
+            <img
+              src={item?.images[0].url ? item?.images[0].url : "images/watch.jpg"}
+              className="img-fluid d-block mx-auto"
+              alt="watch"
+              width={160}
+            />
+          </div>
+          <div className="py-3 px-3">
+            <h5 className="title">{item?.title}</h5>
+            <h6 className="price">$ {item?.price}</h6>
+          </div>
+        </div>
+      </div>
+    ))}
+  </div>
+</Container>
 
-                                        </div>
-                                        <div className='py-3 px-3'>
-                                            <h5 className="title">{item?.title}</h5>
-                                            <h6 className="price">$ {item?.price} </h6>
-                                        </div>
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-
-
-                </div>
-            </Container>
         </>
     )
 }

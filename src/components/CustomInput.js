@@ -6,6 +6,8 @@ const CustomInput = (props) => {
     <div>
       <input type={type} name={name} placeholder={placeholder} value={value} onChange={onChange} disabled={disabled} onBlur={onBlur} className={`form-control ${classname}`} />
     </div>
+
+
   )
 }
 

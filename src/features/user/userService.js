@@ -33,8 +33,9 @@ const addToCart =async(cartData)=>{
 }
 
 
-const getCart =async()=>{
-    const response =await axios.get(`${base_url}user/cart`, config);
+const getCart =async(data)=>{
+    console.log(data);
+    const response =await axios.get(`${base_url}user/cart`, data);
     if(response.data){
         return response.data;
     }
