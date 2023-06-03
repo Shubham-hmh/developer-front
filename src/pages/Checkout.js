@@ -145,14 +145,13 @@ const config2 = {
 
         const result = await axios.post("https://developer-back.onrender.com/api/user/order/paymentVerification", data, config);
         // const result = await axios.post("http://localhost:5000/api/user/order/paymentVerification", data, config);
-
- 
-  dispatch(createAnOrder({ totalPrice: totalAmount, totalPriceAfterDiscount: totalAmount, orderItems: cartProductState, paymentInfo:result.data, shippingInfo:JSON.parse(localStorage.getItem("address")) }))
-  localStorage.removeItem("address");
-
-
         
 
+setTimeout(()=>{
+  dispatch(createAnOrder({ totalPrice: totalAmount, totalPriceAfterDiscount: totalAmount, orderItems: cartProductState, paymentInfo:result.data, shippingInfo:JSON.parse(localStorage.getItem("address")) }))
+  // localStorage.removeItem("address");
+},3000) 
+  
 
       },
       prefill: {
