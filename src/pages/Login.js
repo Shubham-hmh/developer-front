@@ -87,7 +87,7 @@ const Login = () => {
                 Login
               </button>
               <Link to="/signup" className="button signup">
-                SingUp
+                Sign Up
               </Link>
             </div>
           </div>

@@ -6,7 +6,7 @@ const SpecialProduct = (props) => {
     const {title ,brand,totalrating,price,quantity,sold,images ,id}=props;
     return (
   
-        <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3">
+        <div className="col-lg-6 col-md-6 col-sm-12 col-12 mb-3 w-100">
   <div className="special-product-card">
     <div className="d-flex justify-content-between">
       <div>
