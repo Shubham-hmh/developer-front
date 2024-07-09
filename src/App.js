@@ -30,13 +30,15 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path='/' element={<Layout />}>
-            <Route index element={<Home />} />
+          {/* <Route path='/' element={<Layout />}> */}
+            {/* <Route index element={<Home />} /> */}
+            <Route path='/' element={<Home />} />
+
             <Route path='about' element={<About />} />
             <Route path='contact' element={<Contact />} />
             <Route path='product' element={<OurStore/>} />
             <Route path='product/:id' element={<SingleProduct/>} />
-            <Route path='/try' element={<Try/>} />
+            <Route path='try' element={<Try/>} />
 
             <Route path='blogs' element={<Blog/>} />
             <Route path='blogs/:id' element={<SingleBlog/>} />
@@ -56,7 +58,7 @@ function App() {
             <Route path='refund-policy' element={<RefundPolicy/>} />
             <Route path='shipping-policy' element={<ShippingPolicy/>} />
             <Route path='term-policy' element={<TermAndCondition/>} />
-          </Route>
+          {/* </Route> */}
         </Routes>
       </BrowserRouter>
     </>
