@@ -27,9 +27,6 @@ const Login = () => {
     validationSchema: loginSchema,
     onSubmit: values => {
       dispatch(loginUser(values));
-
-
-
     },
   });
 
@@ -86,7 +83,7 @@ const Login = () => {
                     <button className="button border-0" type="submit">
                       Login
                     </button>
-                    <Link to="/signup" className="button signup">
+                    <Link to="/signup" className="button signup" id='signup'>
                       Sign Up
                     </Link>
                   </div>
