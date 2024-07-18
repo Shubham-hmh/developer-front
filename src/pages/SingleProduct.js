@@ -333,14 +333,14 @@ const SingleProduct = () => {
               onChange={(e) => {
                 setComment(e.target.value);
               }}
-              id=""
+              id="txtara"
               cols="30"
               rows="4"
               placeholder="Comments"
             ></textarea>
           </div>
           <div className="d-flex justify-content-end mt-3">
-            <button className="button border-0" onClick={addRatingToProduct} type="button">
+            <button className="button border-0" id='Review' onClick={addRatingToProduct} type="button">
               Submit Review
             </button>
           </div>
